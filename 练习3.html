@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>数组对象和时间对象</title>
+		<script>
+			var arr=["yunnan","sichang","guizhou","guangzhou","gaungxi","anhui"];//采用方括号
+			//一个数组可以用来储存多个值
+			document.write(arr[2]+"</br>");
+			arr[2]="zhejiang";//数组的赋值，将数组中的guizhou变为zhejiang
+			document.write(arr[2]+"</br>");
+			document.write(arr[3]+"</br>");
+			//输出数组中的guangzhou字符，因为是从0开始计数。
+			document.write(arr.length+"</br>");//获取了数组的长度，
+			document.write(arr.slice(1,3)+"</br>");
+			//此处表示截取数组arr内的1--2个元素，包含第二，第三个但没有包含第四个。【1,3）仍是从0开始计数
+			document.write(arr.silce(1)+"</br>");//表示从1到最后。
+			arr.unshift("fujiang");//表示从数组的开始添加元素。
+			arr.push("tianjing");//表示从数组的最后添加元素。
+			document.write(arr+"</br>");
+			arr.shift();//表示删除第一个元素。
+			arr.pop();//表示删除最后一个元素。
+			document.write(arr+"</br>");
+			
+			
+		</script>
+		
+	</head>
+	<body>
+	</body>
+</html>
