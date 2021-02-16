@@ -1,0 +1,80 @@
+#pragma warning(disable:4996)；
+#include <stdio.h>
+#define DAYS_PER_YEAR 365//预编指令，指定了一年的天数。
+int main()
+{
+	/*int age, days;
+	int a, b, c, d, e, f, g, h, i, j;
+	int k, m, n, o;
+	a = 2045;
+	b = 52;
+	c = 89;
+	d = a + b + c;
+
+	age = 20;
+	
+	days = age * DAYS_PER_YEAR;
+
+	//system("color 6");//更改了文字颜色。
+	/*printf("hello word\n");
+	printf("Gustav Mahler\n");
+	printf("Gustav\n");
+	printf("Mahler\n");
+	printf("你好，现在时间2021年2月15日21:46:36");
+	printf("我的名字:\n");
+	printf("徐梓翔\n");
+	printf("You age is %d ,and It is %d days.\n",age,days);
+	printf("从现在开始，尽量使用英文编写。\nFrom now on, try to write in English.\n");
+	printf("%d+%d+%d=?\n",a, b, c);
+	printf("%d\n", d);
+	scanf("%d+%d", &e, &f);
+	g = e + f;
+
+	printf("%d\n", g);
+	scanf("%d%d%d", &h, &i, &j);//加减乘法，三则运算代码。
+	k = h + i + j;
+	n = h - i - j;
+	m = h * i * j;
+	printf("%d,%d,%d\n", k, n, m);*/
+	/*char p;
+	scanf("%c\n", &p);
+	printf("%c\n", p + 1);//打印首字母后面的一个字母。
+	printf("%d", (4 + 5) * 7);*/
+	//这是一个简单的计算方法。
+	/*int a, b, t;
+	printf("输入a和b，第一个为a。\n这个简单的程序是交换a和b的值，\n");
+	scanf("%d%d", &a, &b);
+	//此处引入了t，处于a和b的之间的转化值。
+	t = a;
+	a = b;
+	b = t;
+	printf("现在的a=%d,现在的b=%d", a, b);
+
+	int d, e;
+	printf("输入a和B\n");
+	scanf("%d%d", &d, &e);
+	printf("a=%d,b=%d", d, e);
+	
+
+	e = d - e;
+	d = d - e;
+	e = e + d;
+	
+
+	printf("转换之后。现在的A=%d现在的B=%d",d, e);
+	*/
+	int a;
+	printf("Judge whether the number is less than 0\n");
+	printf("输入一个数字\n");
+	scanf("%d", &a);
+	if (a > 0)
+		printf("a大于0");
+	else
+		if (a == 0)
+			printf("a等于0");
+		else
+			printf("a小于0");
+
+
+	return 0;
+}
