@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>dom进阶</title>
+		<script>
+			
+			/*
+			//获取静态HTML中的属性值
+			 window.onload=function()
+			 {
+				 var oBtn = document.getElementById("btn");
+				 oBtn.onclick = function()
+				 {
+					 alert(oBtn.id);
+				 }
+			 }
+			 
+			 
+			 //获取动态DOM中的属性值
+			 window.onload = function()
+			 {
+				 //创建一个动态按钮
+				 var oInput = document.createElement("input");
+				 oInput.id = "submit";
+				 oInput.type = "button";
+				 oInput.value = "提交";
+				 document.body.appendChild(oInput);
+				 
+				 //为按钮添加点击事件
+				 oInput.onclick = function()
+				 {
+					 alert(oInput.id);//获取属性id
+				 }
+			 }
+			 
+			 //获取文本框的属性
+			 window.onload = function()
+			 {
+				 var oBtn = document.getElementById("btn");
+				 oBtn.onclick = function()
+				 {
+					 var oTxt = document.getElementById("txt");
+					 alert(oTxt.value);
+					 //此处文本框的属性value为空，因为并没有添加属性value，系统默认为空
+				 }
+			 }
+			 */
+			
+			/*
+			 //获取复选框的值
+			 window.onload = function()
+			 {
+				 var oBtn = document.getElementById("btn");
+				 var oFruit = document.getElementsByName("fruit");
+				 var str = "";
+				oBtn.onclick = function()
+				{
+					for(var i=0;i<oFruit.length;i++)
+					{
+						if(oFruit[i].checked)
+						{
+							str += oFruit[i].value;
+						}
+					}
+					alert(str);
+				}
+			 }
+			 */
+			/*
+			 //获取下拉菜单的值
+			 window.onload = function()
+			 {
+				 var oBtn = document.getElementById("btn");
+				 var oSelect = document.getElementById("select");
+				 
+				 oBtn.onclick = function()
+				 {
+					 alert(oSelect.value);
+				 }
+			 }
+			 */
+			/*
+			 //设置HTML属性值
+			 //使用obj.attr的方法设置属性
+			 window.onload = function()
+			 {
+				 var oBtn = document.getElementById("btn");
+				 oBtn.onclick = function()
+				 {
+					 oBtn.value = "button";
+				 }
+			 }
+			 */
+			/*
+			 //使用setAttribute()的方法设置属性
+			 window.onload = function()
+			 {
+				 var oBtn = document.getElementById("btn");
+				 var oPic = document.getElementById("pic");
+				 var flag = true;
+				 
+				 oBtn.onclick = function()			 
+				 {
+					 if(flag)
+					 {
+						 oPic.src ="../img/jiedao/architecture-5705042_1920.jpg";
+						 flag= false;
+						 
+					 }
+					 else
+					 {
+						 oPic.src="../img/jiedao/home-front-2378893_1920.jpg";
+						 flag = true;
+					 } 
+				 };
+				 
+			 }
+			 */
+			
+			//HTML属性操作
+			/*
+			window.onload = function()
+			{
+				var oBtn = document.getElementById("btn");
+				oBtn.onclick = function()
+				{
+					//两种方式都可以获取元素属性
+					//alert(oBtn.getAttribute("id"));
+					alert(oBtn.id);
+				}
+			}
+			*/
+		  
+		</script>
+	</head>
+	<body>
+		<!--
+		<input id="btn" class="myBtn" type="button" value="获取"/>
+		-->
+		<!--
+		<input id="txt" type="text">
+		<input id="btn" type="button" value="获取"/>
+		-->
+		<!--
+		<div>
+			<lable><input type="checkbox" name="fruit" value="苹果"/>苹果</lable>
+			<lable><input type="checkbox" name="fruit" value="香蕉"/>香蕉</lable>
+			<lable><input type="checkbox" name="fruit" value="西瓜"/>西瓜</lable>
+		</div>
+		<input id="btn" type="button" value="获取"/>
+		-->
+		<!--
+		<select id="select">
+			<option value="北京">北京</option>
+			<option value="上海">上海</option>
+			<option value="广州">广州</option>
+			<option value="深圳">深圳</option>
+			<option value="杭州">杭州</option>
+		</select>
+		<input id="btn" type="button" value="获取"/>
+		-->
+		<!--
+		<input id="btn" type="button" value="修改"/></br>
+		<img id="pic" src="../img/jiedao/lamp-4333322_1920.jpg"/>
+		-->
+		<input id="btn" class="myBtn" type="button" value="获取"/>
+	</body>
+                                                                  
