@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>hexin</title>
+	
+		<script>
+			//DOM对象
+			
+			//id选择
+			/*
+			
+			window.onload = function()
+			{
+				var oDiv = document.getElementById("01");
+				oDiv.style.color = "blue";
+				//id选择，文字颜色变为红色
+			}
+			
+			//元素选择，，获取多个元素。
+			
+			window.onload = function()
+			{
+				var oUl = document.getElementById("list");
+				//精确获取到list，再从list中获取元素。否则将会选取整个界面的li
+				var oLi = oUl.getElementsByTagName("li");
+				oLi[2].style.color = "orangered";
+			}
+			
+		//getElementsByTagName()可以操作动态的DOM。
+		//getElementById()则不可以。
+		
+		//通过类名获取元素
+		window.onload = function()
+		{
+			var oLi = document.getElementsByClassName("select");
+			oLi[1].style.color = "red";
+		}
+			 
+			*/
+		   /*
+			//类似CSS的选择
+			window.onload = function()
+			{
+				var oDiv = document.querySelectorAll(".select");
+				//也可以使用document.querySelector("#list li:child(3)")
+				//表示选取id为“list”的元素下的3个元素
+				
+				//或者是querySelector()--表示选择符合的第一个元素
+				//querySelectorAll()表示选择所有，
+				//使用css选择样式
+				oDiv[1].style.color = "red";//类数组,为精确获取使用数组下标的方式
+				
+				
+			}
+			*/
+		   /*
+		   window.onload=function()
+		   {
+			   var arr=["HTML","CSS","JavaScript","jQuery","Vue.js"];
+			   var oUl=document.getElementById("list");
+			   var oLi=document.getElementsByTagName("li");
+			   for(var i=0;i<oLi.length;i++)
+			   {
+				   oLi[i].innerHTML=arr[i];
+				   oLi[i].style.color="red";
+			   }
+		   }
+		   */
+		  //使用getElementsByTagName制作一个动态的DOM;
+		  
+		  /*
+		   window.onload=function()
+		   {
+			   document.body.innerHTML="<input type='button' value='按钮'/><input type='button' value='按钮'/><input type='button' value='按钮'/>";
+		   	var oBtn=document.getElementsByTagName("input");//表单元素有3个
+			//var oBtn=document.getElementById("input");表单元素有undefined
+		   oBtn[0].onclick=function()
+			{
+			   alert("表单元素共有："+oBtn.length+"个");
+			   //错误，拼写错误，符号漏掉
+			}
+			
+		   }
+		   //通过类名获取元素
+		   window.onload=function()
+		   {
+			   var oLi=document.getElementsByClassName("select");
+			   oLi[0].style.color="red";
+		   }
+		   //getElementById(),getElementsByClassName(),getElementsByTagName()只有getElementsByTagName()能操作动态DOM.
+			*/
+		   /*
+		   //使用name属性表单元素获取
+		   window.onload=function()
+		   {
+			   var olnput=document.getElementsByName("status");
+			   //此处的olnput中的l为L的小写形式 
+			   olnput[1].checked=true;
+			   //将第二项作为默认选择。
+		   }
+		                            
+		//一个页面中只有一个title和body元素，
+		//对title和body元素的选取
+		window.onload = function()
+		{
+			document.title = "梦想是什么？？";
+			document.body.innerHTML = "<strong style='color:red'>梦想就是让你感到坚持就是幸福的东西。</strong>"
+		}
+		  */
+		 /*
+		  //创建简单元素(无属性)
+		  window.onload = function()
+		  {
+			  var oDiv = document.getElementById("content");
+			  var oStrong = document.createElement("strong");
+			  var oTxt = document.createTextNode("卡奇偶估计");
+			  
+			  oStrong.appendChild(oTxt);
+			  
+			  oDiv.appendChild(oStrong);
+		  }
+		  */
+		 /*
+		  //创建复杂元素（有属性）
+			 window.onload = function()
+			 {
+				 var oInput = document.createElement("input");
+				 oInput.id = "submit";//添加属性
+				 oInput.type = "button";
+				 oInput.value = "提交";
+				 
+				 document.body.appendChild(oInput);
+			 }
+			 
+			 //创建动态图片
+			 window.onload = function()
+			 {
+				 var oImg = document.createElement("img");
+				 oImg.className = "pic";
+				 oImg.src = "../img/xingkong/cloud-5946381_1920.jpg";
+				 oImg.style.border = "1px soild silver";
+				 
+				 document.body.appendChild(oImg);
+			 }
+			 */
+			
+			/*
+			 //创建多个元素
+			 window.onload = function()
+			 {
+				 var oTable = document.createElement("table");
+				 for(var i = 0; i < 3; i++)
+				 {
+					 var oTr = document.createElement("tr");
+					 
+					 for (var j = 0; j < 3; j++)
+					 {
+						 var oTd = document.createElement("td");
+						 oTr.appendChild(oTd);
+						 
+					 }
+					 oTable.appendChild(oTr);
+				 
+				 }
+				 document.body.appendChild(oTable);
+			 }
+			 */
+			/*
+			 //插入元素
+			 
+			 //两处错误皆为字母拼写错误
+			 window.onload = function () {
+				 var oBtn = document.getElementById("btn");
+				 
+				 //为按钮添加点击事件
+				 oBtn.onclick = function () {
+					var oUl = document.getElementById("list");
+					var oTxt = document.getElementById("txt");
+					
+					//将文本框内容转化为文本节点
+					var textNode = document.createTextNode(oTxt.value);//1
+					
+					//创建一个动态的li元素
+					var oLi = document.createElement("li");
+					
+					
+					//将文本节点插入到li元素中
+					
+					//两种插入方式都需要先获取父元素
+					oLi.appendChild(textNode);
+					//将li元素插入到ul的第一个子元素前面
+					oUl.insertBefore(oLi,oUl.firstElementChild);//2
+					//添加到最后一个元素
+					//oUl.appendChild(oLi);
+				};
+				 
+			 }
+			 */
+			 /*
+			 //删除元素（删除父元素下的某个子元素）
+			 window.onload = function()
+			 {
+				 var oBtn = document.getElementById("btn");
+				 oBtn.onclick = function()
+				 {
+					 var oUl = document.getElementById("list");
+					 //删除最后一个子元素
+					 //oUl.removeChild(oUl.lastElementChild);
+					 //删除整个列表
+					 document.body.removeChild(oUl);
+				 }
+			 }
+			 
+			 
+			 //复制元素
+			 window.onload = function()
+			 {
+				 var oBtn = document.getElementById("btn");
+				 oBtn.onclick = function()
+				 {
+					 var oUl = document.getElementById("list");
+					 document.body.appendChild(oUl.cloneNode(1));
+//oUl表示被复制的元素，（1）表示Bool类型，1为true，0为false。也可以直接输入true或者false。
+				 }
+			 }
+	
+	
+	*/
+	//替换元素
+	window.onload = function()
+	{
+		var oBtn = document.getElementById("btn");
+		oBtn.onclick = function()
+		{
+			//获取body中的第一个元素
+			var oFirst = document.querySelector("body *:first-child");
+			
+			//获取两个文本框
+			var oTag = document.getElementById("tag");
+			var oTxt = document.getElementById("txt");
+			
+			//根据两个文本框的值来创建一个新节点
+			var oNewTag = document.createElement(oTag.value);
+			var oNewTxt = document.createTextNode(oTxt.value);
+			
+			oNewTag.appendChild(oNewTxt);
+			document.body.replaceChild(oNewTag, oFirst);
+			//body是父元素，oNewTag是新的子元素，oFrist是旧的子元素
+		}
+		
+	}
+		</script>
+	
+		<style type="text/css">
+			/*
+			table {border-collapse:collapse;}
+			tr,td
+			{
+				width:80px;
+				height:20px;
+				border:1px burlywood solid;
+				//这里需要先颜色在边框样式
+			}
+			*/
+		   body{background-color: #e5eeff;}
+		</style>
+	
+	</head>
+	<body>
+	
+	<!--
+		<p id="01">现在你好，</br>你必须按你想的去生活，否则你只能按你生活的去想。</p>
+		<ul id = "list">
+			<li>HTML</li>
+			<li>CSS</li>
+			<li class="select">javascript</li>
+			<li class="select">jQuery</li>
+			<li class="select">Vue.js</li>
+		</ul>
+		<div id = "Div">
+			今天是周三。
+		</div>
+	-->	
+	<!--
+<ul id="list">
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	
+	
+</ul>
+	-->	
+	<!--
+	<ul id="list">
+		<li>HTML</li>
+		<li>CSS</li>
+		<li class="select">JavaScript</li>
+		<li class="select">Vue.js</li>
+	</ul>
+	-->
+	<!--
+	<label><input type="radio" name="status" value="本科"/>本科</label>
+	<label><input type="radio" name="status" value="硕士"/>硕士</label>
+	<label><input type="radio" name="status" value="博士"/>博士</label>
+	-->
+	<!--<div id="content"></div>-->
+	<!--
+	<ul id="list">
+		<li>HTML</li>
+		<li>CSS</li>
+		<li>JavaScript</li>
+	</ul>
+	
+	<input id="txt" type="text"/><input id="btn" type="button" value="插入"/>
+	-->
+	<!--
+	<ul id="list">
+		<li>HTML</li>
+		<li>CSS</li>
+		<li>JavaScript</li>
+		<li>jQuery</li>
+		<li>Vue.js</li>
+	</ul>
+	<input id="btn" type="button" value="删除"/>
+	-->
+	<!--
+	<ul id="list">
+		<li>HTML</li>
+		<li>CSS</li>
+		<li>JavaScript</li>
+		<li>jQuery</li>
+		<li>Vue.js</li>
+	</ul>
+	<input id="btn" type="button" value="复制"/>
+	-->
+	
+	<p>JavaScript</p>
+	<hr/>
+	输入标签：<input id="tag" type="text"/><br/>
+	输入内容：<input id="txt" type="text"/><br/>
+	<input id="btn" type="button" value="替换"/>
+	</body>
+</html>
