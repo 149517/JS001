@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>简单制作2</title>
+		<script>
+			window.alert
+		</script>
+		<style type="text/css">
+			body{
+				background-color: #e9ffe2;
+			}
+			a{
+				font-size: 2em;
+				color: #8B0000;
+				text-decoration: none;
+				margin-left: 2rem;
+				
+			}
+			img{margin-left:39rem ;
+				margin-top:4rem;
+				
+				}
+			#information{
+				
+				position: fixed;
+				top: 4.5rem;
+				right: 0rem;
+				
+				}
+			#renxian{
+				border: 2px dashed #0000ff;
+				border-top: 0;
+				position: fixed;
+				top:5rem;
+				right: 0;
+			}
+			video{
+				margin-left:39rem ;
+					margin-top:4rem;
+			}              !DOCTYPE
+			a:hover{color: #0000ff}
+		</style>
+	</head>
+	<body>
+			<a href="https://weread.qq.com/" target="_blank">微信读书</a>
+			<a href="https://www.bilibili.com/" target="_blank">哔哩哔哩</a>
+			<a href="https://www.zcool.com.cn/" target="_blank">站酷</a>
+			<a href="https://weibo.com/" target="_blank">微博</a>	
+			<a href="https://pixabay.com/zh/" target="_blank">pixbay</a>
+
+		<hr/>
+		<hr/>
+		
+		<h1 style="text-align: center;">日出未必意味着光明，太阳也无非是颗辰星而已，只有在我们醒着时，才是真正的破晓。</h1>
+			<img style="margin-bottom: 4rem;
+						margin-left: 45rem;"
+			 src="../img/circle-5816819_640.jpg" alt="黑色人像" title="黑色人像"/>		
+			<p style="text-align: center; font-size: 3rem;">昨日重现</p>
+			<img src="../img/mountains-5796973_640.jpg" alt="mountain" title="mountain"/>	
+			<img src="../img/christmas-5834904_640.jpg" alt="蜡烛" title="蜡烛"/>		
+			<img src="../img/window-5850628_640.png" alt="人像" title="人像"/>	
+			<img src="../img/dockland-4431309_640.jpg" alt="海上" title="海上"/>
+			<img src="../img/bubbles-5671365_640.jpg" alt="雪" title="雪"/>
+			<img src="../img/prague-5405649_640.jpg" alt="教堂" title="教堂"/>
+			<img src="../img/mountains-5868127_640.jpg" alt="山川" title="山川"/>
+		
+		<div id="information" style="border: 2px dashed #0000ff; border-bottom: 0;">
+			制作人：李15<br/>
+			联系电话：19138984361<br/>
+			人物图片
+		</div>
+		<video width="640" height="427"
+			src="../img/摇滚蛮王.mp4" autoplay controls loop></video>
+		<video width="640" height="427"
+			src="../img/【2020Clash圣诞节】滚%20木%20复%20仇%20记.mp4" autoplay controls loop></video>
+		<video width="640" height="427"
+			src="../img/【部落冲突】战场传奇！海盗蛮王霸气登场！.mp4" autoplay controls loop></video>
+		<video width="640" height="427"
+			src="../img/【部落冲突】英雄猎手现身村庄！.mp4" autoplay controls loop></video>
+		<video width="640" height="427"
+			src="../img/【部落冲突五周年】建筑工人快回来吧！.mp4" autoplay controls loop></video>
+		<video width="640" height="427"
+			src="../img/野猪骑士返乡记~1.mp4" autoplay controls loop></video>
+		
+		
+		<img id="renxian" src="../img/circle-5816819_640.jpg" width="183px" height="229px"/>
+	</body>
+</html>
