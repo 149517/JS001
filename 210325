@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"><!--防止界面出现乱码--->
+		
+		<title>静态界面</title>
+		<style type="text/css">
+			table,th,td{cursor: pointer;
+				font-size: 40px;color: brown;border: 1px solid red;}
+			
+			div{
+				width: 120px;
+				height: 100px;
+				line-height: 30px;
+				text-align: center;
+				color:greenyellow;
+				background-color: darkred;
+				font size: 30px;
+			}
+			div:hover{background-color: orange;}
+			/*hover可以鼠标经过定义区域颜色，
+			在鼠标未经过时显示一种颜色鼠标经过时变成不同的颜色也可以添加边框*/
+			p{color: #8B0000;font-size:30px;}
+			
+			a{text-decoration:none;font-size: 40px;color:  #FFA500;}/*去除链接下方横线*/
+			a:link{color: #FFA500;}/*定义超链接未点击时的样式*//*可直接设置链接的颜色，不必定义a：link*/
+			a:visited{color: #FF0000;}/*定义访问后的样式*/
+			a:hover{color: aliceblue;}/*定义鼠标经过时的样式，也可以运用于其他*/
+			a:active{color: #F1E44D;}/*定义鼠标点击时的样式*/
+		</style>
+		<!---css--->
+	</head>
+	<body>
+		<h1>内嵌框架</h1>
+		<tr>
+			
+			<td><iframe src="http://www.baidu.com" width="528" height="428"></iframe></td>
+			<td><iframe src="https://www.zcool.com.cn/" width="528" height="428"></iframe></td>
+			<td><iframe src="02.html" width="528" height="428"></iframe></td>
+		</tr>	
+		<br/>
+		<a href="02.html" target="_blank">跳转界面</a>
+		<hr/>
+		<a href="http://www.lvyestudy.com/" target="_blank"/>绿叶学习网</a>
+		<br/>
+		<a href="https://www.bilibili.com/" target="_blank">bilibili</a>
+		<br/>
+		<a href="#subject">各科小知识</a>
+		<hr/>
+		<h2>图片</h2>
+		<tr>
+			<td><img src="img/龙猫.gif" 
+			width="528",height="428" alt="龙猫动图" title="龙猫"/></td>
+			<td><img src="img/小狗.gif" 
+			width="528",height="428" alt="小狗动图" title="小狗"/></td>
+			<td><img src="img/你自己.png" width="528",height="428" 
+			alt="PNG文字" title="你自己"</td>
+			<td><img src="./img/tupian.jpg" width="528",height="428"
+			 alt="花纹" title="花纹"</td>
+		</tr>
+		<h2>adobe</h2>
+		<ol type="A"><!--有序列表-type=“A”表示列表序号属性-->
+			<li>PS</li>
+			<li>AI</li>
+			<li>PR</li>
+			<li>DW</li>
+		</ol>
+		<hr/>
+		<h2>无序列表属性</h2>
+		<ul type="circle">
+			<li>circle-空心圆</li>
+			<li>disc-实心圆</li>
+			<li>square-方形</li>
+			
+		</ul>
+		<p>常用无序列表</p>
+		<hr/>
+		<span id="subject">
+		<h1>各科小知识</h1>
+		<h3>语文</h3>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;三国演义是中国四大名著之一，元末清初作家罗贯中所著，<br/>
+		是中国第一部章回体历史演义小说，描写了从东汉末年到西晋初年近100年的风云历史。
+		<hr/>
+		<h3>数学</h3>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		勾股定理直角三角形：a<sup>2</sup>+b<sup>2</sup>=c<sup>2</sup>
+		<hr/>
+		<h3>英语</h3>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No pain,No gain.
+		<hr/>
+		<h3>化学</h3>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;H<sub>2</sub>SO<sub>4</sub>是一种重要的工业原料，可用于制作肥料，洗涤剂等。
+		<hr/>
+		<h3>经济</h3>
+		版权符号：&copy;<br/>
+		注册商标：&reg;
+		</span>
+		<hr/>
+		<div3>
+				<a href="https://pixabay.com/"target="_blank"><img src="img/yejing.jpg" 
+			alt="夜景图片" title="夜景"/></a>
+			<!--img src就是图片标签
+			我用的是相对路径，这里表示的是在同一个项目下的img文件夹里的图片
+			至于为什么在绝对路径下打不开图片我还不知道--->
+			<!--alt表示的是图片显示错误时候时出来的文字内容
+			title表示的时在鼠标停留在图片上时会显示出来的内容--->
+			<p><center>这是一个夜景图片</center></p>
+			<!--p是段落标签
+			center是居中标签--->
+			<hr>
+			<a href="https://coolors.co/generate/d0e3cc-f7ffdd-fcfdaf-efd780-dba159"target="_blank">
+				一些颜色
+			</a>
+			<hr/>
+			</div3>
+		<!--a href是网页引用标签，也可以用于打开其他自己制作的网页--->
+		<div>这只是一个测试</div>
+		<hr/>
+		<div2>看看会有什么不同</div2>
+		
+		<hr/>
+		<hr/>
+		<h1>问卷调查</h1>
+		<ol>
+			<li><!---列表嵌套---->
+				<h2>你是通过什么途径来到绿叶学习网的？</h2>
+				<ol type="A">
+					<li>百度搜索</li>
+					<li>谷歌搜索</li>
+					<li>其他途径</li>
+				</ol>
+				
+			</li>
+			<li>
+				<h2>你觉得绿叶学习网怎么样？</h2>
+				<ol type="A">
+					<li>炫酷大方</li>
+					<li>比较普通</li>
+					<li>非常粗糙</li>
+					
+				</ol>
+			</li>
+			<li>
+				<h2>你觉得这本书怎么样？（多选）</h2>
+				<ul type="disc">
+					<li>通俗易懂，轻松幽默</li>
+					<li>内容丰富，技巧贼多</li>
+					<li>三个字：好到爆！</li>
+				</ul>
+			</li>
+		</ol>
+		<table><!--表格--->
+			<caption><!--表格标题--->最近所看电影</caption>
+			<tr><!--表格行--->
+				<th><!---表头单元格--->12/27</th><!--使用表行单元格文字会加大加粗--->
+				<td colspan="2"><!---表行单元格-->夺冠</td>
+			</tr>
+			<tr>
+				<th>12/28</th>
+				<td>让子弹飞</td>
+				<td>还有其他</td>
+				<!--colspan表示合并横向单元格
+				rowspan表示合并纵向单元格---->
+			</tr>
+			<tr>
+				<th>12/29</th>
+				<td colspan="2">千与千寻</td>
+			</tr>
+		</table>
+		<hr/>
+		<table>
+			<caption>学生成绩表</caption>
+			
+				<tr>
+					<th>姓名</th>
+					<th>性别</th>
+					<th>成绩</th>
+				</tr>	
+		
+				<tr>
+					<td>张三</td>
+					<td>男</td>
+					<td>250</td>
+				</tr>	
+				<tr>
+					<td>李四</td>
+					<td>男</td>
+					<td>520</td>
+				</tr>
+				<tr>
+					<td>平均分</td>
+					<td colspan="2">385</td>
+				</tr>
+			
+		</table>
+		<hr/>
+		<table>
+			<tr>
+				<td>
+					<ol id="12">
+						<li>火焰</li>
+						<li>山川</li>
+						<li>歌舞</li>
+					</ol>
+				</td>
+				<td>
+				<img src="img/fire-4892711_1920.jpg" width="528",height="428"
+				alt="火焰" title="火焰"/></td>
+				
+				<td><img src="img/mountains-5661718_1920.jpg"width="528",height="428"
+				alt="山川" title="山川"/></td>
+				<td><img src="img/music-3084876_1920.jpg"width="528",height="428"
+				alt="歌舞" title="歌舞"></td>
+				<!--alt表示图片的描述，是给搜索引擎看的，如果图片无法加载就会显示alt内的内容
+				tile也是图片的描述，是给用户看的，当鼠标停在图片上时，title内的文字就会显示--->
+			</tr>
+		</table>
+		
+	</body>
+</html>
