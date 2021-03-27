@@ -131,8 +131,223 @@
 				}
 			}
 			*/
+		   /*
+		   //获取自定义的属性值
+		   window.onload = function()
+		   {
+				var oBtn = document.getElementById("btn");
+		   
+				oBtn.onclick = function()
+				{
+					//alert(oBtn.data);//未定义
+					alert(oBtn.getAttribute("data"));
+				};
+		   }
+		   
+		   //设置元素属性
+		   window.onload = function()
+		   {
+			   var oBtn = document.getElementById("btn");
+			   oBtn.onclick = function()
+			   {
+				   oBtn.setAttribute("value","button");
+				   //第一个是元素的名称，第二个是要设置的值
+			   }
+		   }
+		   
+		  //删除元素的某个属性
+		  window.onload = function()
+		  {
+			  var oP = document.getElementByTagName("p");
+			  oP[0].onclick = function()
+			  {
+				  oP[0].removeAttribute("class");
+			  }
+		  }
 		  
+		  window.onload = function()
+		  {
+			  var oP = document.getElementsByTagName("p");
+			  var oBtnAdd = document.getElementById("btn_add");
+			  var oBtnRemove = document.getElementById("btn_remove");
+			  
+			  //添加class
+			  oBtnAdd.onclick = function()
+			  {
+				  oP[0]className = "main";
+				  
+			  }
+			  
+			  //删除class
+			  oBtnRemove.onclick = function()
+			  {
+				  oP[0].removeAttribute("class");
+				  
+			  }
+		  }
+		  
+		 //点击之后文字颜色变为黑色
+		  window.onload = function()
+		  {
+		  		   var oP = document.getElementsByTagName("p");
+		  		   
+		  		   if(oP[0].hasAttribute("class"))
+		  		   {
+		  			   oP[0].onclick = function()
+		  			   {
+		  				   oP[0].removeAttribute("class");
+		  			   }
+		  		   }
+		  }
+		  
+		 //获取颜色的色值
+		 window.onload = function()
+		 {
+			 var oBtn = document.getElementById("btn");
+			 var oBox = document.getElementById("box");
+			 
+			 oBtn.onclick = function()
+			 {
+				 alert(getComputedStyle(oBox).backgroundColor);
+			 };
+		 }
+		 */
+		/*
+		//设置CSS属性
+		//style对象
+		
+		window.onload = function()
+		{
+			var oBtn = document.getElementById("btn");
+			
+			var oBox = document.getElementById("box");
+			
+			oBtn.onclick = function()
+			{
+				oBox.style.backgroundColor = "red";
+			}
+			
+			
+		}
+		
+	   //在文本框中输入backgroundColor，在设置颜色就可以改变方块颜色
+		window.onload = function()
+		{
+			var oBtn = document.getElementById("btn");
+			var oBox = document.getElementById("box");
+			
+			oBtn.onclick = function()
+			{
+				//获取两个文本框的值
+				var attr = document.getElementById("attr").value;
+				var val = document.getElementById("val").value;
+				oBox.style[attr] = val;
+			}
+		}
+		*/
+	   /*
+	   //在文本框内输入css的属性（宽高，颜色等）就会设置在图形处设置
+	   window.onload = function()
+	   {
+		   var oBtn = document.getElementById("btn");
+		   var oBox = document.getElementById("box");
+		   
+		   oBtn.onclick = function()
+		   {
+			   //获取文本框的值（输入的内容）
+			   var txt = document.getElementById("txt").value;
+			   oBox.style.cssText = txt;
+		   }
+	   }
+	   */
+	  /*
+	  window.onload = function()
+	  {
+		  var oBtn = document.getElementById("btn");
+		  var oBox = document.getElementById("box");
+		  
+		  oBtn.onclick = function()
+		  {
+			  oBox.className = "newBox";
+		  }
+	  }
+	  */
+	 /*
+	 window.onload = function()
+	 {
+		 var oBtn = document.getElementById("btn");
+		 var oBox = document.getElementById("box");
+		 
+		 oBtn.onclick = function()
+		 {
+			 alert(oBox.style.width);
+			 //obj.style.attr只可以获取元素style属性中设置的CSS属性，不能获取内部样式或者外部样式。
+		 }
+	 }
+	 
+	window.onload = function()
+	{
+		var oBtn = document.getElementById("btn");
+		var oBox = document.getElementById("box");
+		
+		oBtn.onclick = function()
+		{
+			alert(oBox.style.width);
+		}
+	}
+	*/
+   window.onload = function()
+   {
+	   var oBtn = document.getElementById("btn");
+	   var oBox = document.getElementById("box");
+	   
+	   oBtn.onclick = function()
+	   {
+		   var width = getComputedStyle(oBox).width;
+		   alert("元素宽度为:"+width);
+		   
+	   }
+   }
 		</script>
+	
+		<style type="text/css">
+		/*
+			.main{color:red;font-weight: bold;}
+		*/
+	   /*
+		#box
+		{
+			width:100px;
+			height:100px;
+			background-color: #7482FF;
+			
+		}
+		*/
+	   /*
+	   .oldBox{
+		   width:100px;
+		   height:100px;
+		   background-color:hotpink;
+	   }
+	   
+	   .newBox{
+		   width:50px;
+		   height:50px;
+		   background-color:lightblue;
+		   
+	   }
+	   */
+	  /*
+	  #box{
+		  width:100px;
+		  height:100px;
+		  background-color:hotpink;
+	  }
+	  */
+	  #box{width:150px !important;}
+		</style>
+		
+	  
 	</head>
 	<body>
 		<!--
@@ -164,6 +379,32 @@
 		<input id="btn" type="button" value="修改"/></br>
 		<img id="pic" src="../img/jiedao/lamp-4333322_1920.jpg"/>
 		-->
-		<input id="btn" class="myBtn" type="button" value="获取"/>
+		<!--
+		<input id="btn" type="button" value="获取" data="JavaScript"/>
+		
+		<input id="btn" type="button" value="修改"/>
+		
+		
+		<p class="main">我们都太聪明，在开始做事之前总想着意义和收获</p>
+		-->
+		<!--
+		<input id='btn_add' type="button" value="添加样式"/>
+		<input id="btn_remove" type="button" value="删除样式"/>
+		
+		<input id="btn" type="button" value="设置"/>
+		<div id="box"></div>
+		
+		属性：<input id="attr" type="text"/></br>
+		取值：<input id="val" type="text"/><br/>
+		<input id="btn" type="button" value="设置"/>
+		<div id="box"></div>
+		
+		<input id='txt' type="text"/>
+		<input id="btn" type="button" value="设置"/>
+		<div id="box"></div>
+		-->
+		
+		<input id="btn" type="button" value="获取宽度"/>
+		<div id="box" style="width:100px;height:100px;background-color:hotpink"></div>
 	</body>
                                                                   
